@@ -1,5 +1,5 @@
 import SwiftUI
-//import SDWebImageSwiftUI
+import SDWebImageSwiftUI
 
 struct PokemonDetailsView: View {
     var pokemonId: Int
@@ -9,7 +9,7 @@ struct PokemonDetailsView: View {
     @State private var skills: [String] = []
     @State private var isBottomSheetOpened: Bool = false
     @State private var sizeOfBottomSheet: Double = 0
-  //  @State private var image: WebImage?
+    @State private var image: WebImage?
     
     func updateData() {
         self.pokeStore.getPokemonSpecie(pokemonId: self.pokemonId) { content in
@@ -19,7 +19,7 @@ struct PokemonDetailsView: View {
             self.pokemon = pokemon
             self.skills = pokemon.types?.map { $0.type?.name ?? "" } ?? []
             let imageUrl = pokemon.sprites?.other?.officialArtwork?.frontDefault
-           // self.image = WebImage(url: URL(string: imageUrl!))
+            self.image = WebImage(url: URL(string: imageUrl!))
         }
     }
     
@@ -61,12 +61,12 @@ struct PokemonDetailsView: View {
                         }
                     }
                     
-//                    self.image?
-//                        .resizable()
-//                        .indicator(.activity)
-//                        .transition(.fade(duration: 0.5))
-//                        .scaledToFit()
-//                        .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0.0, y: 0.0)
+                    self.image?
+                        .resizable()
+                        .indicator(.activity)
+                        .transition(.fade(duration: 0.5))
+                        .scaledToFit()
+                        .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0.0, y: 0.0)
                     
                     Spacer()
                 }

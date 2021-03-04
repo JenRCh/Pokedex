@@ -12,10 +12,10 @@ struct HomeView: View {
             Color(#colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1))
                 .edgesIgnoringSafeArea(.all)
             
-//            Image(uiImage: #imageLiteral(resourceName: "tg_image_4069414066"))
-//                .resizable()
-//                .edgesIgnoringSafeArea(.all)
-//                .opacity(0.2)
+            Image(uiImage: #imageLiteral(resourceName: "tg_image_4069414066"))
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+                .opacity(0.2)
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading) {

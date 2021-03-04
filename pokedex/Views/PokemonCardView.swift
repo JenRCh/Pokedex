@@ -1,5 +1,5 @@
 import SwiftUI
-//import SDWebImageSwiftUI
+import SDWebImageSwiftUI
 
 struct PokemonCardView: View {
     let id: Int
@@ -9,7 +9,7 @@ struct PokemonCardView: View {
     @State private var name: String = ""
     @State private var skills: [String] = []
     @State private var color: Color?
-   // @State private var image: WebImage?
+    @State private var image: WebImage?
     private let degrees: Double = 5
     
     func updateData() {
@@ -21,7 +21,8 @@ struct PokemonCardView: View {
             name = content.name!.capitalized
             skills = content.types?.map { $0.type?.name ?? "" } ?? []
             let imageUrl = content.sprites?.other?.officialArtwork?.frontDefault
-          //  image = WebImage(url: URL(string: imageUrl!))
+             
+            image = WebImage(url: URL(string: imageUrl!))
         }
     }
     
@@ -71,16 +72,16 @@ struct PokemonCardView: View {
                 anchor: .leading
             )
             
-//            image?
-//                .resizable()
-//                .indicator(.activity)
-//                .transition(.fade(duration: 1))
-//                .scaledToFit()
-//                .shadow(radius: 3)
-//                .scaleEffect(1.4)
-//                .frame(width: 120)
-//                .padding(.trailing)
-//
+            image?
+                .resizable()
+                .indicator(.activity)
+                .transition(.fade(duration: 1))
+                .scaledToFit()
+                .shadow(radius: 3)
+                .scaleEffect(1.4)
+                .frame(width: 120)
+                .padding(.trailing)
+
         }
         .background(
             ZStack(alignment: .leading) {

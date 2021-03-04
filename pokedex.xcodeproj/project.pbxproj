@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63299FE225F09A590087E375 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 63299FE125F09A590087E375 /* SDWebImageSwiftUI */; };
 		63CEEED725EF3CEC003F1C19 /* pokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CEEED625EF3CEC003F1C19 /* pokedexApp.swift */; };
 		63CEEED925EF3CEC003F1C19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CEEED825EF3CEC003F1C19 /* ContentView.swift */; };
 		63CEEEDB25EF3CEC003F1C19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CEEEDA25EF3CEC003F1C19 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63299FE225F09A590087E375 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +168,9 @@
 			dependencies = (
 			);
 			name = pokedex;
+			packageProductDependencies = (
+				63299FE125F09A590087E375 /* SDWebImageSwiftUI */,
+			);
 			productName = pokedex;
 			productReference = 63CEEED325EF3CEC003F1C19 /* pokedex.app */;
 			productType = "com.apple.product-type.application";
@@ -193,6 +198,9 @@
 				Base,
 			);
 			mainGroup = 63CEEECA25EF3CEC003F1C19;
+			packageReferences = (
+				63299FE025F09A590087E375 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 63CEEED425EF3CEC003F1C19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -418,6 +426,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		63299FE025F09A590087E375 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63299FE125F09A590087E375 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63299FE025F09A590087E375 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63CEEECB25EF3CEC003F1C19 /* Project object */;
 }
